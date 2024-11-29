@@ -1,0 +1,27 @@
+@use 'index' as *;
+
+.header{
+  width: 100%;
+  max-width: 1920px;
+  position: fixed;
+  padding: 2rem 5%;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  .time-area{
+    width: 500px;
+    border-top: 10px solid map-get($dark-mode , color);
+    opacity: 0.5;
+    transition: all 1s  ease;
+    &:hover {
+      border-top: 10px solid map-get($light-mode , color);
+      opacity: 0.5;
+    }
+  }
+  .nav-area{
+    width: 500px;
+    
+  }
+  
+
+}

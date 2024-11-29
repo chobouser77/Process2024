@@ -1,0 +1,16 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+$dark-mode: (
+  background-color : #333333;
+  color : #ffffff;
+);
+$light-mode: (
+  background-color : #fafafa;
+  color : #000000;
+);
+
+body {
+  margin: 0; padding: 0;
+  font-family: 'Pretendard', 'Arial', 'Helvetica', sans-serif;
+}
+
