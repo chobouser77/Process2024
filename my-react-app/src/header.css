@@ -74,9 +74,17 @@ body {
 }
 .header .h-bt #dark-button #dark-bt {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .header .h-bt #dark-button #light-bt {
   display: none;
+  width: 100%;
+  height: 100%;
+}
+.header .h-bt #dark-button img {
+  width: 100%;
+  height: 100%;
 }
 .header .h-bt #dark-button.active #dark-bt {
   display: none;
