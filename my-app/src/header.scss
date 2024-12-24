@@ -17,9 +17,24 @@
       border-top: 10px solid map-get($light-mode , color);
       opacity: 0.5;
     }
+    .gage{
+      width: 100%;
+      height: 100%;
+      background-color: gray;
+      .gage-pull{
+        height: 100%;
+        width: 0;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+    .time{
+      font-size: 24px;
+      
+    }
   }
   .h-text{
-    width: 500px;    
+    font-size: 24px;  
+    color: #8DD3FF;
   }
   .h-bt {
     display: flex;
@@ -36,7 +51,20 @@
       }
     }
     #dark-button {
-      &.active
+      #dark-bt {
+        display: flex;
+      }
+      #light-bt {
+        display: none;
+      }
+      &.active {
+        #dark-bt {
+          display: none;
+        }
+        #light-bt {
+          display: flex;
+        }        
+      }
     }
   }
   
