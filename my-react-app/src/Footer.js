@@ -87,7 +87,7 @@ const Footer = () => {
               {firstLinks.map((link, index) => {            
                 return (
                   <li key={index}>
-                    <a href={link.href}>{link.text}</a>
+                    <a target="_blank" href={link.href}>{link.text}</a>
                   </li>
                 );
               })}

@@ -48,15 +48,14 @@ const Header = () => {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // `.show` 클래스 추가/제거
-      if (headerRef.current) {
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          headerRef.current.classList.add("show"); // 스크롤 다운 시 추가
-        } else {
-          headerRef.current.classList.remove("show"); // 스크롤 업 시 제거
-        }
-      }
+      
+      // if (headerRef.current) {
+      //   if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      //     headerRef.current.classList.add("show"); // 스크롤 다운 시 추가
+      //   } else {
+      //     headerRef.current.classList.remove("show"); // 스크롤 업 시 제거
+      //   }
+      // }
 
       // 스크롤 진행률 업데이트
       const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -94,14 +93,14 @@ const Header = () => {
           <img id="light-bt" src="/img/sun.png" alt="라이트모드 버튼" />
         </button>
       </div>
-      {showTopButton && (
+      {/* {showTopButton && (
         <button
           id="scrollToTopBtn"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           ↑ Top
         </button>
-      )}
+      )} */}
     </div>
   );
 };
