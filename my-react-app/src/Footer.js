@@ -11,7 +11,7 @@ const Footer = () => {
   const firstLinks = link.slice(0, 3); 
   
   useEffect(() => {
-    emailjs.init('user77'); 
+    emailjs.init('6cTZbho42pl72tmT9'); 
   }, []);
 
   const isValidEmail = (email) => {
@@ -44,7 +44,7 @@ const Footer = () => {
       from_email: sanitizedEmail,
       message: sanitizedContents,
     };
-  
+    // 서비스 id , 템플릿 id
     emailjs.send('service_mkg5ybh', 'template_waitjs2', templateParams)
       .then((response) => {
         console.log('이메일 전송 성공:', response);
