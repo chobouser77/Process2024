@@ -10,12 +10,19 @@ $light-mode: (
   color: #000000
 );
 
-
-body {
-  margin: 0; padding: 0;
+body {  
   font-family: 'Pretendard', 'Arial', 'Helvetica', sans-serif;
   background-color: #333333;
   position: relative;
+}
+body , ul , li {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0;
 }
 // 
 body {

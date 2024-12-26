@@ -1,15 +1,21 @@
 @use 'index' as *;
 
 .header{
-  width: 100%;
-  max-width: 1920px;
+  box-sizing: border-box;
+  width: 100%;  
   position: fixed;
+  top: 0;
+  left: 0;
   padding: 2rem 5%;
-  padding-bottom: 0;
+  // padding-bottom: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   opacity: 0.7;
   transition: opacity 1s  ease;
+  background-color: #ffffff10;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in;
   &:hover {      
    opacity: 1;
   }
@@ -43,6 +49,7 @@
   }
   .h-bt {
     display: flex;
+    box-sizing: border-box;
     padding: 0 64px;
     align-items: center;
     justify-content: center;
@@ -58,6 +65,7 @@
     #dark-button {
       background: none;
       border: none;
+      padding: 0;
       cursor: pointer;
       #dark-bt {
         display: flex;
@@ -93,5 +101,24 @@
     border: none;
     border-radius: 4px;
   }
-
+  &.show{
+    transform: translateY(-115px);    
+  }
+  @media (max-width : 768px) {
+    padding: 1rem ;
+    .time-area {
+      display: none;
+    }
+    .h-text {
+      font-size: 20px ;
+    }
+    .h-bt {
+      padding: 0;
+      gap: 32px;
+      .h-bt-a {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
 }
