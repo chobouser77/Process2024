@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "sass": "^1.83.0",
+    "web-vitals": "^4.2.4"
+  }
+}
