@@ -10,10 +10,20 @@ $light-mode: (
   color: #000000
 );
 
+@mixin dark-mode {
+  background-color: map-get($dark-mode, background-color);
+  color: map-get($dark-mode, color);
+}
+@mixin light-mode {
+  background-color: map-get($light-mode, background-color);
+  color: map-get($light-mode, color);
+}
+
 body {  
   font-family: 'Pretendard', 'Arial', 'Helvetica', sans-serif;
   background-color: #333333;
   position: relative;
+  max-width: 1920px;
 }
 body , ul , li {
   list-style: none;
@@ -24,7 +34,7 @@ a {
   text-decoration: none;
   padding: 0;
 }
-// 
+// 임시
 body {
   height: 5000px;
 }
