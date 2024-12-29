@@ -84,7 +84,7 @@ const Header = () => {
       <div className="h-text">Proplie</div>
 
       <div className="h-bt">
-        <a href="" className="h-bt-a link" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/chobouser77" className="h-bt-a link" target="_blank" rel="noopener noreferrer">
           <img src="/img/github_icon.png" alt="깃헙" />
         </a>
 
