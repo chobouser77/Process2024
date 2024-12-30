@@ -4,7 +4,8 @@ import "./Section.scss";
 
 const Section1 = () => {
 
-
+    const abc = 1;
+    
     return (
         <div className="section section1">
             <p className="big-font">
