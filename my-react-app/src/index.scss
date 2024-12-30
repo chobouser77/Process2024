@@ -24,6 +24,7 @@ body {
   background-color: #333333;
   position: relative;
   max-width: 1920px;
+  width: 100%;
 }
 body , ul , li {
   list-style: none;
@@ -34,5 +35,8 @@ a {
   text-decoration: none;
   padding: 0;
 }
-
+// 임시
+body {
+  height: 5000px;
+}
 
