@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Header from './Header';
+import Header from './Header.js';
 import Footer from './Footer';
-import Section1 from './Section1';
-import Section2 from './Section2';
-import Section3 from './Section3';
-import Section4 from './Section4';
+import Section1 from './Section1.js';
+import Section2 from './Section2.js';
+import Section3 from './Section3.js';
+import Section4 from './Section4.js';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(1);  // 현재 섹션 상태
