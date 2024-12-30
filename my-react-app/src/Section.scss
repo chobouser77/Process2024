@@ -2,6 +2,7 @@
 
 // 섹션 공통
 .section {
+    overflow: hidden;
     min-width: 350px;
     width: 100%;
     height: 100vh;
@@ -23,7 +24,7 @@
        font-size: 128px;
        font-weight: 600; 
        @media (max-width : 1420px) {
-        font-size: 68px !important;
+        font-size: 48px !important;
        }
     //    @media (max-width : 768px) {
     //     font-size: 32px !important;
@@ -70,5 +71,168 @@
                 }
             }
         }        
+    }
+}
+// 섹션 2
+.section2 {
+    .right-div {
+        padding: 0;
+        display: flex;        
+        height: 500px;
+        gap: 64px;
+        .s2-r {
+            box-sizing: border-box;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            border-radius: 32px;
+            border:linear-gradient( 45deg , #A5F15E, #A5F15E00 , #A5F15E00 , #A5F15E);            
+            background: radial-gradient( #ffffff00 , #ffffff10);
+            max-width: 360px;
+            min-width: 200px;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.25s  ;            
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 3px;
+                border-radius: 32px;
+                background: linear-gradient(135deg, #A5F15E, #A5F15E00 15%, #A5F15E00 85%, #A5F15E);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                z-index: 1;
+            }
+            p {
+                margin: 0;
+            }
+            .s2-r-1 {
+                font-size: 24px ;
+            }
+            ul.s2-r-2 {
+                font-weight: 300;
+                font-size: 18px;                        
+                padding-left: 20px;
+                gap: 5px;
+                display: flex;
+                flex-direction: column;                
+                li {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: "•";
+                        color: #fff;
+                        font-size: 30px;
+                        top: -9px;
+                        left: -20px;
+                    }  
+                }
+                @media (max-width : 1420px) {
+                    font-size: 14px;  
+                }
+                @media (max-width : 768px) {
+                    font-size: 12px;  
+                }
+                             
+            }
+            @media (max-width : 1420px) {
+                gap: 16px;
+                padding: 16px;
+                border-radius: 16px;
+                &::before {
+                    border-radius: 16px;
+                }
+            }
+        }
+        @media (max-width : 1420px) {
+            gap: 32px;
+        }
+        @media (max-width : 768px) {
+            gap: 32px;
+            flex-direction: column;
+            height: auto;                
+                  
+        }
+    }
+}
+// 섹션 3
+.section3 {      
+    .right-div {
+        // overflow-y: auto;
+        // // overflow-x: hidden;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        min-width: 300px;
+        max-width: 1080px;
+        width: 100%;        
+        gap: 48px;
+        .s3-r {
+            box-sizing: border-box;
+            width: auto !important;
+            height: auto !important;
+            padding: 32px;
+            display: inline-flex;            
+            flex-direction: column;
+            gap: 32px;
+            border-radius: 32px;
+            border:linear-gradient( 45deg , #A5F15E, #A5F15E00 , #A5F15E00 , #A5F15E);            
+            background: radial-gradient( #ffffff00 , #ffffff10);            
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 3px;
+                border-radius: 32px;
+                background: linear-gradient(135deg, #C091F2, #C091F200 15%, #C091F200 85%, #C091F2);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                z-index: 1;
+                @media (max-width : 1420px) {
+                    border-radius: 16px;
+                }
+            }
+            p {
+                margin: 0;
+            }
+            .s3-r-1 {
+                font-size: 24px ;
+                @media (max-width : 1420px) {
+                    font-size: 16px;                   
+                }
+            }
+            .s3-r-2  {                                                   
+                gap: 5px;
+                display: inline-flex;
+                flex-wrap: wrap;
+                p {
+                    font-weight: 300;
+                    font-size: 20px; 
+                    text-wrap: nowrap;
+                }                                
+                @media (max-width : 1420px) {
+                    p {
+                        font-size: 14px;  
+                    }                    
+                }
+                             
+            }
+            @media (max-width : 1420px ) {
+                border-radius: 16px;
+                padding: 16px !important;
+                gap: 16px !important;
+            }
+            @media (max-width : 768px ) {
+                max-width: 50%;
+            }
+        }
+        @media (max-width : 1420px ) {
+            gap: 16px;
+        }
     }
 }

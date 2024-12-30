@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./index.scss";
-import "./section.scss";
+import "./Section.scss";
 
 const Section1 = () => {
 
