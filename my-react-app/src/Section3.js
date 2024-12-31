@@ -13,7 +13,7 @@ const Section3 = () => {
     ]
 
     return (
-        <div className="section section3">
+        <div className="section0 section3">
             <p className="big-font">Tech Stacks</p>
             <div className="right-div">
               {skil.map((item, index) => (

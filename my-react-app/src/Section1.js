@@ -6,7 +6,7 @@ const Section1 = () => {
 
 
     return (
-        <div className="section section1">
+        <div className="section0 section1">
             <p className="big-font">
                 Always <br/>
                 ready

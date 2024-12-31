@@ -21,7 +21,7 @@ const Section2 = () => {
 
 
     return (
-        <div className="section section2">
+        <div className="section0 section2">
             <p className="big-font">
               Experience
             </p>
