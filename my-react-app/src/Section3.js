@@ -14,10 +14,10 @@ const Section3 = () => {
 
     return (
         <div className="section0 section3">
-            <p className="big-font">Tech Stacks</p>
+            <p className="big-font yoso">Tech Stacks</p>
             <div className="right-div">
               {skil.map((item, index) => (
-                <div key={index} className="s3-r">
+                <div key={index} className="s3-r yoso">
                   <p className="s3-r-1">{item.title}</p>
                   <div className="s3-r-2">
                     {item.text.map((tech, index) => (

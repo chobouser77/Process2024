@@ -22,10 +22,10 @@ const Section2 = () => {
 
     return (
         <div className="section0 section2">
-            <p className="big-font">
+            <p className="big-font yoso">
               Experience
             </p>
-            <div className="right-div">
+            <div className="right-div yoso">
                 <div ref={cardRef1} className="s2-r s2-r1" onMouseMove={(e) => handleMove(e, cardRef1)} onMouseOut={() => handleOut(cardRef1)}>
                     <p className="s2-r-1">Experience</p>
                     <ul className="s2-r-2">

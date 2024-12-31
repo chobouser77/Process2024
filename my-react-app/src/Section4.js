@@ -4,10 +4,37 @@ import "./Section.scss";
 import projectData from "./project.json"
 
 const Section4 = () => {  
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add('scaled'); 
+                }, 100);
+              } else {
+                entry.target.classList.remove('scaled');
+              }
+            });
+          },
+          {
+            rootMargin: '0px 0px 10% 0px',
+            threshold: 0.95,
+          }
+        );
+    
+        const targets = document.querySelectorAll('.s4project');
+        targets.forEach((target) => observer.observe(target));
+    
+        return () => {
+          targets.forEach((target) => observer.unobserve(target));
+          observer.disconnect();
+        };
+      }, []);
 
     return (
         <div className="section0 section4">
-            <div className="big-font">
+            <div className="big-font yoso">
               participating <br/>
               project
             </div>
@@ -17,11 +44,11 @@ const Section4 = () => {
                         {/* <img className="s4-img" src={project.image} alt={project.title} /> */}
                     </div>
                     <div key={index} className="s4-right-area">
-                        <p className="title right-p">{project.title}</p>
+                        <p className="title right-p">title : {project.title}</p>
                         <div className="right-p2">
                             <p className="p2-1 progress">{project.progress}</p>
                             <ul>
-                            <li className="personnel">{project.personnel}</li>
+                            <li className="personnel">작업인원 : {project.personnel}</li>
                             <li
                                 className="outline"
                                 dangerouslySetInnerHTML={{ __html: project.outline }}

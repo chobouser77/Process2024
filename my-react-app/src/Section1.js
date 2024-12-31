@@ -7,11 +7,11 @@ const Section1 = () => {
 
     return (
         <div className="section0 section1">
-            <p className="big-font">
+            <p className="big-font yoso">
                 Always <br/>
                 ready
             </p>
-            <div className="right-div">
+            <div className="right-div yoso">
                 <div className="s1-r s1-r1">
                     퍼블리셔에서 더 나아가 프론트엔드 까지<br/>
                     관심이 있는 신입 이희준 입니다.
