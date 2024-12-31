@@ -42,6 +42,7 @@ const Section4 = () => {
             {projectData.map((project, index) => (
                 <a href={project.address} target="_blank" className="s4project address">
                     <div className="s4-left-area">
+                        관련 이미지
                         {/* <img className="s4-img" src={project.image} alt={project.title} /> */}
                     </div>
                     <div key={index} className="s4-right-area mode">
