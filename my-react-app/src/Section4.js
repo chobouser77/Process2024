@@ -18,7 +18,7 @@ const Section4 = () => {
             });
           },
           {
-            rootMargin: '0px 0px 10% 0px',
+            rootMargin: '100% 0px 10% 0px',
             threshold: 0.95,
           }
         );
@@ -44,7 +44,7 @@ const Section4 = () => {
                         {/* <img className="s4-img" src={project.image} alt={project.title} /> */}
                     </div>
                     <div key={index} className="s4-right-area">
-                        <p className="title right-p">title : {project.title}</p>
+                        <p className="title right-p">Title : {project.title}</p>
                         <div className="right-p2">
                             <p className="p2-1 progress">{project.progress}</p>
                             <ul>

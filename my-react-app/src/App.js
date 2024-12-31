@@ -15,33 +15,44 @@ function App() {
   const handleScroll = (e) => {
     // 현재 스크롤 중이라면 처리하지 않음
     if (isScrolling.current) return;
-  
+
+    // 섹션 4의 위치가 top: 0 근처일 때만 스크롤을 허용
+    const section4Rect = section4Ref.current?.getBoundingClientRect();
+    if (
+      section4Rect &&
+      Math.abs(section4Rect.top) > ALLOWED_OFFSET &&
+      e.deltaY < 0 &&
+      currentSection === 4
+    ) {
+      return; // 섹션 4가 상단에 오지 않으면 위로 스크롤 안 됨
+    }
+
     // 스크롤 시작 플래그 설정
     isScrolling.current = true;
-  
+
     const direction = e.deltaY > 0 ? 'down' : 'up';
-  
+
     if (direction === 'down' && currentSection < 4) {
       setCurrentSection((prev) => prev + 1);
     } else if (direction === 'up' && currentSection > 1) {
       setCurrentSection((prev) => prev - 1);
     }
-  
+
     // 일정 시간이 지난 후 다시 스크롤 가능하도록 설정
     setTimeout(() => {
       isScrolling.current = false;
     }, 500); // 500ms 후 스크롤 허용
   };
-  
+
   useEffect(() => {
     // currentSection 변경 시 해당 섹션으로 이동
     scrollToSection(currentSection);
   }, [currentSection]);
-  
+
   const scrollToSection = (section) => {
     const sectionElement = document.getElementById(`section-${section}`);
     if (!sectionElement) return;
-  
+
     window.scrollTo({
       top: sectionElement.offsetTop,
       behavior: 'smooth',

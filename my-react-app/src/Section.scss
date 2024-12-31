@@ -244,6 +244,7 @@
     height: auto !important;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 16px;
     .big-font {
         width: 100%;
         height: 70vh;
@@ -258,7 +259,7 @@
         gap: 8px;
         box-sizing: border-box;
         transform: scale(1);
-        transition: transform 1s ease-in-out;
+        transition: transform 0.5s ease-in-out;
         .s4-left-area {
             box-sizing: border-box;
             width: 33%;
