@@ -8,6 +8,17 @@
   display: flex;
   justify-content: space-between;
   color: #fff;
+  &.active {
+    @include light-mode();
+    // background-color: #F0F0F0 !important;
+    background-color: #ffffff90 !important;
+    .r-t , .r-bottom{
+      border: 1px solid #000000 !important;
+    }
+    p , a {
+      color: #000000;      
+    }
+  }
   .f-left {   
     display: flex;
     flex-direction: column;     
@@ -66,6 +77,7 @@
     .r-bottom {
       box-sizing: border-box;
       border: 1px solid #fff;
+      background-color: #1d1d1d;
       padding: 10px;
       display: flex;
       flex-direction: column;

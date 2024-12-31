@@ -6,7 +6,7 @@ $dark-mode: (
 );
 
 $light-mode: (
-  background-color: #fafafa,
+  background-color: #f5f5dc,
   color: #000000
 );
 
@@ -21,10 +21,13 @@ $light-mode: (
 
 body {  
   font-family: 'Pretendard', 'Arial', 'Helvetica', sans-serif;
-  background-color: #333333;
   position: relative;
   max-width: 1920px;
   width: 100%;
+  @include dark-mode();
+  &.light-mode {
+    @include light-mode();
+  }
 }
 body , ul , li {
   list-style: none;

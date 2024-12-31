@@ -7,6 +7,7 @@ const Header = () => {
   const [showTopButton, setShowTopButton] = useState(false);
   const [scrollWidth, setScrollWidth] = useState(0);
   const headerRef = useRef(null); 
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // 날짜 및 시간 업데이트
   useEffect(() => {
@@ -72,8 +73,29 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleToggle = () => {
+    setIsDarkMode((prevState) => !prevState); // 상태 토글
+  };
+  // 다크 / 라이트 모드
+  useEffect(() => {
+    const modeElements = document.querySelectorAll('.mode');
+    const body = document.querySelector('body');
+
+    if (isDarkMode) {
+      body.classList.add('light-mode');
+      modeElements.forEach((el) => {
+        el.classList.add('active');
+      });
+    } else {
+      body.classList.remove('light-mode');            
+      modeElements.forEach((el) => {
+        el.classList.remove('active');
+      });
+    }
+  }, [isDarkMode]);
+
   return (
-    <div className="container header" ref={headerRef}>      
+    <div className="container header mode" ref={headerRef}>      
       <div className="time-area">
         <div className="gage">
           <div className="gage-pull" style={{ width: `${scrollWidth}%` }}></div>
@@ -88,7 +110,7 @@ const Header = () => {
           <img src="/img/github_icon.png" alt="깃헙" />
         </a>
 
-        <button id="dark-button" className="h-bt-a">
+        <button id="dark-button" className="h-bt-a mode" onClick={handleToggle}>
           <img id="dark-bt" src="/img/moon.png" alt="다크모드 버튼" />
           <img id="light-bt" src="/img/sun.png" alt="라이트모드 버튼" />
         </button>

@@ -4,6 +4,7 @@ import "./Section.scss";
 import projectData from "./project.json"
 
 const Section4 = () => {  
+    // 프로젝트 칸 스크롤 트리거
     useEffect(() => {
         const observer = new IntersectionObserver(
           (entries) => {
@@ -43,7 +44,7 @@ const Section4 = () => {
                     <div className="s4-left-area">
                         {/* <img className="s4-img" src={project.image} alt={project.title} /> */}
                     </div>
-                    <div key={index} className="s4-right-area">
+                    <div key={index} className="s4-right-area mode">
                         <p className="title right-p">Title : {project.title}</p>
                         <div className="right-p2">
                             <p className="p2-1 progress">{project.progress}</p>

@@ -11,10 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include dark-mode;
-    &.light-mode {
-        @include light-mode;
-    }
+    // @include dark-mode;
+    // &.light-mode {
+    //     @include light-mode;
+    // }
     @media (max-width : 768px) {
         padding: 0 32px;
         flex-direction: column;
@@ -96,6 +96,9 @@
             height: 100%;
             position: relative;
             transition: transform 0.25s  ;            
+            &.active {
+                background: radial-gradient( #00000000 0% , #00000030 70%);
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -160,7 +163,7 @@
     }
 }
 // 섹션 3
-.section3 {      
+.section3 {
     .right-div {
         // overflow-y: auto;
         // // overflow-x: hidden;
@@ -183,6 +186,9 @@
             border:linear-gradient( 45deg , #A5F15E, #A5F15E00 , #A5F15E00 , #A5F15E);            
             background: radial-gradient( #ffffff00 , #ffffff10);            
             position: relative;
+            &.active {
+                background: radial-gradient( #00000000 0% , #00000030 70%);
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -283,6 +289,9 @@
             border: 1px solid #000;
             background-color: #ffffff;
             color: #000;
+            &.active {
+                @include dark-mode();
+            }
             .right-p {
                 font-size: 2rem;
                 font-weight: 600;
@@ -313,6 +322,17 @@
             transform: scale( 0.7 );
             position: sticky;
             top: 0;
+        }
+        @media (max-width : 768px) {
+            flex-direction: column;
+            .s4-left-area {
+                width: 100%;
+                height: 33%;
+            }
+            .s4-right-area {
+                width: 100%;
+                height: 67%;
+            }
         }
     }
 

@@ -57,7 +57,7 @@ const Footer = () => {
   
 
   return (
-    <div className="contanal footer"> 
+    <div className="contanal footer mode"> 
       <div className="f-left">
         <span className="f-l-1">I worked hard in</span>
         <span className="f-l-2">cooperation</span>
@@ -65,14 +65,16 @@ const Footer = () => {
       <div className="f-right">
         <div className="r-top">
           <div className="r-t t-1">
-            신입 웹 퍼블리셔 지망생 <br/>
-            이희준 프로필 포트폴리오. <br />
-            Figma로 레이아웃 디자인.<br/>
-            TailwindCSS 혹은 Bootstrap 으로 <br/>
-            프로토타이핑 작업후, <br/>
-            CSS / SCSS 로 반응형 레이아웃 작업 후,<br/>
-            AOS , Swiper 등으로 동적 움직임 작업 <br/>
-            Vercel.app 을 통해 배포 작업.<br/>
+            <p>
+              신입 웹 퍼블리셔 지망생 <br/>
+              이희준 프로필 포트폴리오. <br />
+              Figma로 레이아웃 디자인.<br/>
+              TailwindCSS 혹은 Bootstrap 으로 <br/>
+              프로토타이핑 작업후, <br/>
+              CSS / SCSS 로 반응형 레이아웃 작업 후,<br/>
+              AOS , Swiper 등으로 동적 움직임 작업 <br/>
+              Vercel.app 을 통해 배포 작업.
+            </p>            
           </div>
           <div className="r-t t-2">
             <p className="t-2-1">contant</p>

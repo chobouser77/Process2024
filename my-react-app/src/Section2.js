@@ -26,7 +26,7 @@ const Section2 = () => {
               Experience
             </p>
             <div className="right-div yoso">
-                <div ref={cardRef1} className="s2-r s2-r1" onMouseMove={(e) => handleMove(e, cardRef1)} onMouseOut={() => handleOut(cardRef1)}>
+                <div ref={cardRef1} className="s2-r s2-r1 mode" onMouseMove={(e) => handleMove(e, cardRef1)} onMouseOut={() => handleOut(cardRef1)}>
                     <p className="s2-r-1">Experience</p>
                     <ul className="s2-r-2">
                       <li>학원에서의 팀 프로젝트에서 디자이너와의 Figma 협업을 통한, 사용법과 확인해야 할 내용들 확인</li>
@@ -34,7 +34,7 @@ const Section2 = () => {
                       <li>다른 개발자와의 협업을 통해 Figma , Git 협업을 통해 실제 일어날 법한 다양한 의견 충돌과 기획 경험 및 공부함</li>
                     </ul>
                 </div>
-                <div ref={cardRef2} className="s2-r s2-r2" onMouseMove={(e) => handleMove(e, cardRef2)} onMouseOut={() => handleOut(cardRef2)}>
+                <div ref={cardRef2} className="s2-r s2-r2 mode" onMouseMove={(e) => handleMove(e, cardRef2)} onMouseOut={() => handleOut(cardRef2)}>
                     <p className="s2-r-1">Study</p>
                     <ul className="s2-r-2">
                       <li>HTML 을 통한 마크업과 CSS 를 이용한 스타일링 JavaScript를 통한 동적 처리 를 공부함</li>
